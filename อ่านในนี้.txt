@@ -1,0 +1,155 @@
+ตัวเช็ดบัญชีที่เข้าได้พร้อมบอกยอดเงิน
+โหลดข้อมูลบัญชีจากไฟล์msd.txt
+และเซฟทันทีเข้าได้พร้อมบอกยอดเงิน
+ไม่ต้องรอเสร็จเซฟทันทีเข้าได้
+เซฟทั้งหมดแบบนี้
+เช่น
+ชื่อ
+รหัสผ่าน
+ยอดเงิน
+Wallet
+แต้มสะสม
+
+เซฟทั้งหมดเพราะเราไม่ได้รันในนี้
+ขอสีสวยๆ
+ใส่อีโมจิด้วยจะได้สวยๆ
+ไม่ต้องใส่คำอธิบาย
+เริ่มเลย
+ข้อมูลหน้าล็อกอิน
+<div class="modal-dialog modal-login">
+		<div class="modal-content">
+			<div class="modal-header">
+				<div class="avatar">
+					<img class="animated flipInY" src="https://byshop.me/buy/img/icon_byshop.png" alt="Avatar">
+				</div>							
+	<h4 class="modal-title">
+	<center><i class="fa fa-sign-in" aria-hidden="true"></i>&nbsp;เข้าสู่ระบบ
+		<center>
+		</center></center></h4>
+		</div>
+        <div class="modal-body">
+
+<div class="text-left mt-1"><i class="fa fa-angle-right"></i> ชื่อผู้ใช้</div>		   
+  <div class="input-group mb-1">
+  <div class="input-group-prepend">
+    <span class="input-group-text" id="basic-addon1"><i class="fas fa-user"></i></span>
+  </div>
+  <input type="text" class="form-control" id="username" placeholder="Username" required="" autocomplete="off">
+</div>
+<div class="text-left mt-1"><i class="fa fa-angle-right"></i> รหัสผ่าน</div>
+  <div class="input-group mb-1">
+  <div class="input-group-prepend">
+
+    <span class="input-group-text" id="basic-addon1"><i class="fas fa-lock"></i></span>
+  </div>
+		   <input type="password" class="form-control" id="password" placeholder="Password" required="" autocomplete="off">
+		
+							
+							 		<div class="input-group-prepend"><span class="input-group-text" id="basic-addon1"> <span class="fa fa-fw field-icon toggle-password fa-eye" type="checkbox"></span>
+</span></div>					
+</div>
+<!-- CAPTCHA cloudflare / Google reCAPTCHA -->
+<div class="text-left mt-1" id="cloudflare-captcha">
+  <div class="cf-turnstile" data-sitekey="0x4AAAAAAA8prEJtUJwIV5fM" data-theme="light" data-callback="onTurnstileSubmit"><div><template shadowmode="closed"><iframe src="cid:frame-764FA66E05947DEBFA4D848AD1FB26DA@mhtml.blink" allow="cross-origin-isolated; fullscreen; autoplay" sandbox="allow-same-origin allow-scripts allow-popups" id="cf-chl-widget-edkhv" tabindex="0" title="วิดเจ็ตที่มีอุปสรรคด้านความปลอดภัยของ Cloudflare" style="border: none; overflow: hidden; width: 300px; height: 65px;"></iframe></template></div></div>
+</div>
+<div class="text-left mt-1" id="google-recaptcha" style="display: none;">
+  <div class="g-recaptcha" data-sitekey="6LckAHgrAAAAABMI7bAkJGmKwKrvKHrTb0CSELb-"><div style="width: 304px; height: 78px;"><div><iframe title="reCAPTCHA" width="304" height="78" role="presentation" name="a-fa7whdyk5nq9" frameborder="0" scrolling="no" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation allow-modals allow-popups-to-escape-sandbox allow-storage-access-by-user-activation" src="cid:frame-9D085F437A63DFCAAE8C6AACB894B499@mhtml.blink"></iframe></div><textarea id="g-recaptcha-response" name="g-recaptcha-response" class="g-recaptcha-response" style="width: 250px; height: 40px; border: 1px solid rgb(193, 193, 193); margin: 10px 25px; padding: 0px; resize: none; display: none;"></textarea></div><iframe style="display: none;"></iframe></div>
+</div>
+
+<!-- โหลด JS cloudflare/ Google reCAPTCHA -->
+
+
+
+
+
+
+
+<p>
+<a data-toggle="modal" data-target="#resetpassword" href="https://byshop.me/buy/#"></a></p><div class="float-right" style="font-size: 0.9rem;"><a data-toggle="modal" data-target="#resetpassword" href="https://byshop.me/buy/#">ลืมรหัสผ่าน ?</a></div><p></p>
+<br>
+						<a id="btn" class="btn blue-gradient btn-block btn-lg text-light">
+							<i class="fas fa-sign-in-alt"></i>&nbsp;เข้าสู่ระบบ
+						</a>
+						
+						
+						
+						apiล็อกอิน
+						import requests
+
+url = "https://byshop.me/buy/act.php"
+
+params = {
+  'login': ""
+}
+
+payload = {
+  'username': "bosyu1321",
+  'password': "0825194571ads",
+  'captcha': "",
+  'captcha_cf': "0.Ikp2euR-on1hdVWueirzhkdHoamwKzRSE-AyFukBOfB01oKRSFgiDwb2If-m9MTJN-6AW39jysxCmtbiq9Xn05yrCrf5lm8kE9G6OiI4VjztCCyxmqHy3ORmrSRBJ4OE0r3QeJEn9kzyx8wem41pra6lVZT45hArlQxrueZVKQFwxAvvGe3mQ7CFXT_LrSl7OYja7IbgP-poVGEVVTIFT7dk9qGvFxaObuJemC1RkDXs64VtkNCSHzqNvfZI9V2e5__OkmEVmzrcTkr78aHl4RKEAYi4mr3F2fVg5WSLfjp7NoyfWw4QeeEerzuyuZke18ebfLPrcltkTSeDT8apSnWmA0khuROUpNYs4nnCCln2ESkbQGC8VdAEwn9s0gJ7XdkaQxuJYeI0jqOnjPM6BZ4PH7XOvY4rwQcgNSclTHq6vcikCg7ia5mIuBgaJyB-ZozD7K6sDAdnbWZkZqK9esvyqtPIU-jXnCJr9UTpFVA0iHt3SRzc35RdrzHtzzEGATmfjBk-YEn6S9vK0UqE9xV-Wn1QqybJJoHkr2WCHsv6De_OdPwVpVnK78FLGOU7BrTm_d2qEvfgFnrU5fOmvx1aRwDMv3XyZIO-Oki5nmlQ6GuRkagF1Sj4yq1bYCvUjKL8p7pmPpI6r6S4KKMsv66JCv6SVyElC--HvDnkHdLchyDO9-UjdTU_k9mW_2xe2aUzvK3pfKalQdSM82NiMBJTJLy_VCbkAoCM260w7MgyYlVRUAXNfkobtruV3U6gAmF3q3N7gqxGreQKkoUM78Pp3h0t0vytXBRFfnu3GUib8MTVDo3HwhnuxcADE7iaajLFyA_GJ8vvi6Z2c7906junOnyKd5MvK-atai4cKSPjpIUohvprjAiz9kTG4O3QeuCwjak3gCpP8rXzJghHZuHlaRGGGicMASuWH34_HKI.M9RwMewjlfNjKnPTIo9T7w.c0f42c436874796a0a0ef116764c9c97b2b52208476bc150eb6eb543d915e6e7",
+  'captcha_google': "0cAFcWeA5F_cxJ79q3HyV2H7ZvZa0eK02Q5xLKU_0myd78ZDfoaALLSoahTK24PMyeMgkiiACGKhO94Wl9z_ab7i1IAoetyp-d0DKUBgGc0Yi2_ReVLiv4YcRZ9ICWykWxzmAwgHDw_4l1UQyi6EYQ3CV-HdVmwjjmMqTZgZyVBrMKJBXaGt0hXg2zqfPaagGzfD1BdqV8DqDsYnGEBdCc_dg03B0uJDykMcM4u79IEZwwfe0ZgNFgKZ25pKuUEOMR7_0wx85ghGTlRPNJ0PAxdagVuv41GY4ATwExqnmAMNug0zsW2-N7BhFBsEVcHj-mMFE_xaKf_VzyDiytLG1lQU1u749_MotnqDUF-g6hLgBdfJjxPA0ygclz46lhCWq37BvD1JOg8ywyIiraE0DNq3Sk-ocVx2YHplEX5KTeSPeLLZHhD-8_zbbIXMLsh10dYP0E2ahHQ4TSgPo2ovSceeRex83hNYj5CldDmgNRS9Wgoq7DafBzy_OvCfRJ4s2HfwWKmB9LlmtMCm_dEGPjr-F47qH63M1AHrmCV9vj8K4CO_FD0JkNHjf549w-Hn2V3Hg9z7OQp3u5cp-MdH5JrV22Niwqu6dy3f5vhkdxYPXkm1pl6sc0gTJPlmCy5M3n3RxbD5FWMKAxxo-MJlNHACjLyOms7zjHy2onrPd9_W8fUv_6g21i4OYedmwO0ubMj5IWDezvgGSUfmuptygvaZ811YOtyp-sFDQaVByjOnSvP7YO3VHPXv-sc8MQvKda6egKIw058idrE4EHc-uKxJ0Sky2AYLOBZK4Lz8U6NSEonAjSZANCpdg"
+}
+
+headers = {
+  'User-Agent': "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Mobile Safari/537.36",
+  'Accept-Encoding': "gzip, deflate, br, zstd",
+  'sec-ch-ua-platform': "\"Android\"",
+  'x-requested-with': "XMLHttpRequest",
+  'sec-ch-ua': "\"Google Chrome\";v=\"143\", \"Chromium\";v=\"143\", \"Not A(Brand\";v=\"24\"",
+  'sec-ch-ua-mobile': "?1",
+  'origin': "https://byshop.me",
+  'sec-fetch-site': "same-origin",
+  'sec-fetch-mode': "cors",
+  'sec-fetch-dest': "empty",
+  'referer': "https://byshop.me/buy/",
+  'accept-language': "th-TH,th;q=0.9",
+  'priority': "u=1, i",
+  'Cookie': "PHPSESSID=tuzPt72vRkys4EVW2NCi7kCBIINE2lxk25vAX6Arb2PQWZO6"
+}
+
+response = requests.post(url, params=params, data=payload, headers=headers)
+
+print(response.text)
+
+ตอนเข้าสู่ระบบ
+ต้องรอให้พวกนี้ขึ้นถูกต้อง
+แล้วค่อยกดเข้าสู่ระบบ
+นี่พวกนี้
+ต้องรอ
+หรือกดด้วยให้โค้ดทำให้พร้อมเลย
+https://i.postimg.cc/5tbM0rq9/Screenshot-2025-12-26-22-02-12-0979351229.png
+รออันนี้
+กับอันนี้
+https://i.postimg.cc/Dy1vw1kx/Screenshot-2025-12-26-21-52-38-0449035699.png
+รอโหลดให้มันเสร็จก่อนจะได้เข้าสู่ระบบได้สำเร็จ
+
+ข้อมูลหน้าหลังล็อกอิน
+เข้าสู่ระบบเพื่อ
+ตรวจสอบยอดเงิน
+และตรวจสอบอื่นๆ
+/a>&nbsp;
+		   <button type="button" class="btn btn-Dark dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-wallet"></i>&nbsp;ยอดเงิน: 0.26 บาท<span class="sr-only">Toggle Dropdown</span></button>
+
+<div class="d-flex">
+  <div class="dropdown-menu dropdown-menu-right w-100 w-md-auto custom-dropdown-scroll" style="max-width: 350px;" aria-labelledby="navbarDropdown">
+    <center>
+      <h6 class="dropdown-header"><i class="fas fa-user-circle"></i>&nbsp;ข้อมูลส่วนตัว</h6>
+    </center>
+    <a class="dropdown-item"><i class="fas fa-user"></i>&nbsp;Slsjzj</a>
+    <hr>
+    <a class="dropdown-item">
+      <i class="fas fa-wallet"></i>&nbsp;ยอดเงิน : 0.26 บาท
+      <br>
+      <small style="padding-left:30px;">• สำหรับซื้อแอปดูหนัง</small>
+    </a>
+    <hr>
+    <a class="dropdown-item">
+      <i class="fas fa-wallet"></i>&nbsp;Wallet : 0.00 บาท
+      <br>
+      <small style="padding-left:30px;">• สำหรับเติมเกมส์ / บัตรเงินสด / สมัครเน็ต / เติมเงินมือถือ</small>
+    </a>
+    <hr>
+    <a class="dropdown-item">
+      <i class="fas fa-trophy"></i>&nbsp;แต้มสะสม : 58.26 แต้ม
+      <br>
+      ประมาณนี้
